@@ -17,6 +17,7 @@ public partial class Account_Register : Page
     protected void RegisterUser_CreatedUser(object sender, EventArgs e)
     {
         FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
+        string yiShengTest = "it is only test";
 
         string continueUrl = RegisterUser.ContinueDestinationPageUrl;
         if (!OpenAuth.IsLocalUrl(continueUrl))
