@@ -1,0 +1,21 @@
+1. Track all file.
+	1.1 Go to root folder.
+	1.2 Execute command		git add -A
+2. Commit changes.
+	2.1 Execute command		git commit
+	2.2 Write your commit information in vim.
+	2.3 press 'esc' , press ':wq' (wq means write and quite) press 'enter'
+
+3. Fetch repository.
+	3.1 Execute command		git fetch
+
+4. Push changes.
+	4.1 Execute command		git fetch
+	4.2 Execute command 	git diff master origin/master		(See the difference between remote repoesitory and your local repository)
+	4.3 If there is some difference between origin and master
+		4.3.1 Execute command 	git merge master origin/master
+		4.3.2 Execute command 	git push origin master
+	4.4 else
+		4.4.1 Execute command 	git push origin master
+
+PS: If there is something wrong with the github, please follow the error message and try to communicate with each other first.
