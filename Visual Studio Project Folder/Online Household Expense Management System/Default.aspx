@@ -12,8 +12,9 @@
             <input id="username" maxlength="64" name="username" class="text" type="text">
             <label>Password</label>
             <input id="password" maxlength="64" name="password" class="text" type="password">
-            <asp:CheckBox ID="CheckBox1" runat="server" />
+            <asp:CheckBox ID="CheckBox1" runat="server" css=""/>
             <label class="checkbox-text">Remember me for a week</label>
+            <asp:Button ID="Login" class="loginbtn" runat="server" Text="Sign in" />
             </form>
             <a href="/" class="resetpassword"></a>
         </div>
