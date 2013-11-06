@@ -4,7 +4,7 @@
     <div class="login">
         <div class="reg-header">
             <h3>Sign in</h3>
-            <span class="switch"> <form></form>Create an Account</span>
+            <span class="switch">Create an Account</span>
         </div>
         <div class="signin">
             <form runat="server" id="login_form" name="login_form" action="" method="">
@@ -12,12 +12,11 @@
             <input id="username" maxlength="64" name="username" class="text" type="text">
             <label>Password</label>
             <input id="password" maxlength="64" name="password" class="text" type="password">
-            <asp:CheckBox ID="CheckBox1" runat="server" css=""/>
+            <input id="rememberMe" class="checkbox" type="checkbox" value="true" name="rememberMe"/>
             <label class="checkbox-text">Remember me for a week</label>
-            <asp:Button ID="Login" class="loginbtn" runat="server" Text="Sign in" />
+            <input type="button" id="login" value="Sign in"/>
             </form>
-            <a href="/" class="resetpassword"></a>
+            <a href="/" class="resetpassword">Reset your password?</a>
         </div>
-    </div>
-    
+    </div>    
 </asp:Content>
