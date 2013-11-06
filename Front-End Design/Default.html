@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header class="header">
+            <h1>
+                <a href="/">
+                    <span>LOGO</span>
+                </a>
+            </h1>
+            <ul id="main-links" class="main-nav">
+                <li class="faq">
+                <a href="/">FAQ's</a>
+                </li>
+                <li class="helpcenter">
+                <a href="/">HelpCenter</a>
+                </li>
+            </ul>
+    </header>
+    <div class="login">
+        <div class="reg-header">
+            <h3>Sign in</h3>
+            <span class="switch"> <form></form>Create an Account</span>
+        </div>
+        <div class="signin">
+            <form runat="server" id="login_form" name="login_form" action="" method="">
+            <label>Email address or username</label>
+            <input id="username" maxlength="64" name="username" class="text" type="text">
+            <label>Password</label>
+            <input id="password" maxlength="64" name="password" class="text" type="password">
+            <input id="rememberMe" class="checkbox" type="checkbox" value="true" name="rememberMe"></input>
+            <label class="checkbox-text">Remember me for a week</label>
+            <input type="button" id="login" value="Sign in"></input>
+            </form>
+            <a href="/" class="resetpassword">Reset your password?</a>
+        </div>
+    </div>
+	<footer class="footer">
+            <ul id="second-links" class="second-nav">
+                <li>Contact Us</li>
+                <li>Company Information</li>
+            </ul>
+    </footer>
+</body>
+</html>
