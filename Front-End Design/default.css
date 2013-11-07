@@ -9,17 +9,6 @@ body {
 	background-color: #0769CC;
 	border-radius: 6px 6px 8px 8px;
 }
-.header h1 {
-	display: inline;
-	float: left;
-	width: 100px;
-	height: 45px;
-	margin-top: 0px;
-	padding-top: 6px;
-	margin-left: 50px;
-	color: #FFFFFF;
-}
-
 .header #main-links {
 	display: inline;
 	float: left;
@@ -45,10 +34,9 @@ body {
 	height: 570px;
 	display: block;
 	width: 100%;
-	padding-top: 20px;
-	padding-left: 20px;
-	float: left;
 	margin-bottom: 10px;
+	margin-top: 10px;
+	float: left;
 }
 .container .login {
 	width: 260px;
@@ -60,6 +48,8 @@ body {
 	display: inline-block;
 	background-color: #F5F5F5;
 	border: thin solid #E4E4E4;
+	margin-top: 20px;
+	margin-left: 20px;
 }
 .container .login .reg-header {
 	display: block;
@@ -84,9 +74,8 @@ body {
 	display: inline;
 }
 .container .login .signin {
-	display: block;
+	display: inline-block;
 	margin-top: 16px;
-
 }
 .container .login .signin #login_form label {
 	display: block;
@@ -141,18 +130,22 @@ body {
 	display: block;
 	float: left;
 	width: 100%;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
 }
 .footer #second-links {
 	display: block;
+	width: 99%;
 	float: left;
-	width: 925px;
 }
 .footer #second-links li {
 	display: inline;
 	position: static;
 	margin-left: 241px;
+}
+.header .logo {
+	width: 70px;
+	display: block;
+	height: 45px;
+	float: left;
+	font-size: 24px;
+	line-height: 50px;
 }
