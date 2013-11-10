@@ -5,7 +5,7 @@
         <div class="login">
             <div class="reg-header">
                 <label>Sign in</label>
-                <span class="switch">Create an Account</span>
+                <a href="../Register.aspx"><span class="switch">Create an Account</span></a>
             </div>
             <div class="signin">
                 <form runat="server" id="login_form" name="login_form" action="" method="">

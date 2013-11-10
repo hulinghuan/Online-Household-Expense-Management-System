@@ -74,6 +74,8 @@
 	width: 159px;
 	height: 62px;
 	margin-left: 98px;
+	color: #1176FF;
+	text-decoration: none;
 }
 .container .login .reg-header label {
 	display: inline;
@@ -232,8 +234,8 @@
 .container .find-us .follow li a {
 	text-decoration: none;
 }
-.container .feature-section .feature-image .feature-image-left {
-	background-image: url(../Images/CPECalculatorandPen-after-modify.jpg);
+.container .feature-section .feature-video .feature-image-right {
+	background-image: url(../images/accounting-ledger.jpg);
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -245,8 +247,9 @@
 	width: 302px;
 	height: 382px;
 }
-.container .feature-section .feature-video .feature-image-right {
-	background-image: url(../Images/accounting-ledger.jpg);
+
+.container .feature-section .feature-image .feature-image-left {
+	background-image: url(../images/CPECalculatorandPen-after-modify.jpg);
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -257,4 +260,7 @@
 	display: block;
 	width: 302px;
 	height: 382px;
+}
+.container .login .reg-header a {
+	text-decoration: none;
 }
