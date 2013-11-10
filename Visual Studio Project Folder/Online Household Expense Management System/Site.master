@@ -14,13 +14,12 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
-    
     <header class="header">
-            <h1>
+            <label class="logo">
                 <a href="/">
                     <span>LOGO</span>
                 </a>
-            </h1>
+            </label>
             <ul id="main-links" class="main-nav">
                 <li class="faq">
                 <a href="/">FAQ's</a>
