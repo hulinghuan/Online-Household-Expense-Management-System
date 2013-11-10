@@ -233,7 +233,7 @@
 	text-decoration: none;
 }
 .container .feature-section .feature-image .feature-image-left {
-	background-image: url(images/CPECalculatorandPen-after-modify.jpg);
+	background-image: url(../Images/CPECalculatorandPen-after-modify.jpg);
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -246,7 +246,7 @@
 	height: 382px;
 }
 .container .feature-section .feature-video .feature-image-right {
-	background-image: url(images/accounting-ledger.jpg);
+	background-image: url(../Images/accounting-ledger.jpg);
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
