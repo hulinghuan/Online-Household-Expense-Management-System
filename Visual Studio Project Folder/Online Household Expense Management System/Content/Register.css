@@ -76,7 +76,7 @@
 	display: block;
 	margin-bottom: 10px;
 }
-.Register-container .register .register-controls #register_form #useremail {
+.Register-useremail {
 	width: 295px;
 	height: 25px;
 	padding-top: 5px;
@@ -86,7 +86,7 @@
 	margin-bottom: 10px;
 	display: block;
 }
-.Register-container .register .register-controls #register_form #username {
+.Register-username {
 	width: 295px;
 	height: 25px;
 	padding-top: 5px;
@@ -96,7 +96,7 @@
 	margin-bottom: 10px;
 	display: block;
 }
-.Register-container .register .register-controls #register_form #password {
+.Register-password {
 	width: 295px;
 	height: 25px;
 	padding-top: 5px;
@@ -121,7 +121,8 @@
 	float: left;
 }
 
-.Register-container .register .register-controls .signin #register_form #register {
+
+.Register-button {
 	display: block;
 	width: 110px;
 	height: 45px;
@@ -138,6 +139,8 @@
 	font-weight: bolder;
 	float: left;
 }
+
+
 .Register-container .register .register-controls .reg-header .switch a {
 	text-decoration: none;
 	color: #1176FF;

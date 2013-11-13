@@ -14,15 +14,17 @@
                 <label class="switch">Or <a href="./Default.aspx"><span>Login in</span></a></label>
             	</div>
                 <div class="signin">
-            	<form runat="server" id="register_form" name="login_form" action="" method="">
+            	    <form id="register_form" runat="server">
                 <label>Email address</label>
-                <input id="useremail" maxlength="64" name="username" class="text" type="text">
+                <asp:TextBox ID="tb_UserEmail" runat="server" MaxLength="50" CssClass="Register-useremail"></asp:TextBox>
                 <label>User name</label>
-                <input id="username" maxlength="64" name="username" class="text" type="text">
+                <asp:TextBox ID="tb_UserName" runat="server" MaxLength="25" CssClass="Register-username"></asp:TextBox>
                 <label>Password</label>
-                <input id="password" maxlength="64" name="password" class="text" type="password">
-                <input type="button" id="register" value="Register"/>
-                </form>
+                <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="Register-password"></asp:TextBox>
+
+
+                        <asp:Button ID="btn_Reg" runat="server" OnClick="btn_Reg_Click" Text="Register" CssClass="Register-button"/>
+                    </form>
                 </div>
             </div>
             <div class="tour1">

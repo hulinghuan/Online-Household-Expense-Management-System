@@ -8,16 +8,18 @@
                 <a href="../Register.aspx"><span class="switch">Create an Account</span></a>
             </div>
             <div class="signin">
-                <form runat="server" id="login_form" name="login_form" action="" method="">
+                <form id="login_form" runat="server">
                 <label>Email address or username</label>
-                <input id="username" maxlength="64" name="username" class="text" type="text">
-                <label>Password</label>
-                <input id="password" maxlength="64" name="password" class="text" type="password">
+                <asp:TextBox ID="tb_Username" runat="server" Maxlength="50" CssClass="login_username" ImeMode ="close"></asp:TextBox>
+                <label> Password</label>
+                <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="login_password" TextMode="Password" ImeMode ="Disable"></asp:TextBox>
                 <input id="rememberMe" class="checkbox" type="checkbox" value="true" name="rememberMe"/>
                 <label class="checkbox-text">Remember me for a week</label>
-                <input type="button" id="login" value="Sign in"/>
+                <asp:Button ID="btn_Login" runat="server" OnClick="btn_Login_Click" Text="Sign in" CssClass="login_btn_Login" style="CURSOR:pointer"/>
+                <a href="/" class="resetpassword">
+                    
+                    Reset your password?</a>
                 </form>
-                <a href="/" class="resetpassword">Reset your password?</a>
             </div>
         </div>
     	<div class="feature-section">	
