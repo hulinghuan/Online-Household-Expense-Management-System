@@ -6,7 +6,8 @@
         <div class="register">
             <h1>Create an Online Household Expense Management Account</h1>
             <div class="page-intro">
-            	<label>Online Household Expense Management helps you track every expense in your life and let you see how you spend them.</label>
+            	<label>Online Household Expense
+&nbsp;Management helps you track every expense in your life and let you see how you spend them.</label>
             </div>
             <div class="register-controls">
             	<div class="reg-header">
@@ -15,7 +16,9 @@
             	</div>
                 <div class="signin">
             	    <form id="register_form" runat="server">
-                <label>Email address</label>
+                
+                        
+                 <label>Email address</label>
                 <asp:TextBox ID="tb_UserEmail" runat="server" MaxLength="50" CssClass="Register-useremail"></asp:TextBox>
                 <label>User name</label>
                 <asp:TextBox ID="tb_UserName" runat="server" MaxLength="25" CssClass="Register-username"></asp:TextBox>
@@ -23,7 +26,15 @@
                 <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="Register-password"></asp:TextBox>
 
 
-                        <asp:Button ID="btn_Reg" runat="server" OnClick="btn_Reg_Click" Text="Register" CssClass="Register-button"/>
+                        
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:Label ID="lb_reminder" runat="server" Text="Please input normal email address" Visible="False"></asp:Label>
+                
+                            </ContentTemplate>
+                            </asp:UpdatePanel>
+                 <asp:Button ID="btn_Reg" runat="server" OnClick="btn_Reg_Click" Text="Register" CssClass="Register-button" style="CURSOR:pointer"/>               
                     </form>
                 </div>
             </div>

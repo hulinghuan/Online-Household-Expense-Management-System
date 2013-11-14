@@ -37,16 +37,25 @@ public partial class _Default : Page
             {
                 cmd.Connection = conn;
                 cmd.CommandText = "select count(*) from UserLogin where EmailAddr=@EmailAddr"; 
-                cmd.Parameters.AddWithValue("@EmailAddr", tb_Username.Text); 
-                if (cmd.ExecuteScalar().ToString() == "0") 
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>"); 
-                else{
-                    cmd.CommandText = "select LastName from UserLogin where EmailAddr=@EmailAddr and UserPwd=@UserPwd"; 
-                    cmd.Parameters.AddWithValue("@UserPwd", tb_Password.Text); 
-                    if (cmd.ExecuteScalar() == null) 
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('password incorrect!')</script>");
-                    else{
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('succeed!');location.href='PersonalHome.aspx'</script>");
+                cmd.Parameters.AddWithValue("@EmailAddr", tb_Username.Text);
+                if (cmd.ExecuteScalar().ToString() == "0")
+                {
+                    // Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>"); 
+                    lb_reminder.Text = "username invaild!";
+                    lb_reminder.Visible = true;
+                }
+                else
+                {
+                    cmd.CommandText = "select UserName from UserLogin where EmailAddr=@EmailAddr and UserPwd=@UserPwd";
+                    cmd.Parameters.AddWithValue("@UserPwd", tb_Password.Text);
+                    if (cmd.ExecuteScalar() == null)
+                    {//Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('password incorrect!')</script>");
+                        lb_reminder.Text = "password incorrect!";
+                        lb_reminder.Visible = true;
+                    }
+                    else
+                    {
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>location.href='PersonalHome.aspx'</script>");//alert('succeed!');
                     }
                 }
             }

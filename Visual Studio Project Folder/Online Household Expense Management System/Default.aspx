@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Household Accounting | Use your money wisely!" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Household Accounting | Use your money wisely!" Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="container">
@@ -10,16 +11,22 @@
             <div class="signin">
                 <form id="login_form" runat="server">
                 <label>Email address or username</label>
-                <asp:TextBox ID="tb_Username" runat="server" Maxlength="50" CssClass="login_username" ImeMode ="close"></asp:TextBox>
+                <asp:TextBox ID="tb_Username" runat="server" Maxlength="50" CssClass="login_username" ></asp:TextBox>
                 <label> Password</label>
-                <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="login_password" TextMode="Password" ImeMode ="Disable"></asp:TextBox>
+                <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="login_password" TextMode="Password" ></asp:TextBox>
                 <input id="rememberMe" class="checkbox" type="checkbox" value="true" name="rememberMe"/>
                 <label class="checkbox-text">Remember me for a week</label>
                 <asp:Button ID="btn_Login" runat="server" OnClick="btn_Login_Click" Text="Sign in" CssClass="login_btn_Login" style="CURSOR:pointer"/>
-                <a href="/" class="resetpassword">
-                    
-                    Reset your password?</a>
-                </form>
+                <a href="/" class="resetpassword">Reset your password? </a>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
+                            <asp:Label ID="lb_reminder" runat="server" Text="Label" Visible="False"></asp:Label>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                   
+                &nbsp;</form>
             </div>
         </div>
     	<div class="feature-section">	
@@ -48,7 +55,8 @@
                     <span class="link-text">Google+</span></a>
                 </li>
                 <li>
-                    <a href="http://www.youtube.com/user/EvernoteVideos" class="exit_tracking" data-label="YouTube"><span class="link-text">YouTube</span></a>
+                    <a href="http://www.youtube.com/user/EvernoteVideos" class="exit_tracking" data-label="YouTube">
+                    <span class="link-text">YouTube</span></a>
                 </li>
 			</ul>
         </div>
@@ -61,5 +69,5 @@
             </ul>
         </div>
     </div>
-    </div>    
+      
 </asp:Content>
