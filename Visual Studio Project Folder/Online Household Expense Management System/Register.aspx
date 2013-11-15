@@ -53,12 +53,12 @@
 
 
                         
-                        <asp:PasswordStrength ID="tb_Password_PasswordStrength" runat="server" Enabled="True" TargetControlID="tb_Password"
+                       <%-- <asp:PasswordStrength ID="tb_Password_PasswordStrength" runat="server" Enabled="True" TargetControlID="tb_Password"
                         DisplayPosition ="Rightside" StrengthIndicatorType="Text" TextCssClass="TextIndicator_tb_Password"
                         MinimumLowerCaseCharacters="1" MinimumNumericCharacters="1" MinimumSymbolCharacters ="1" MinimumUpperCaseCharacters="1"    
                         TextStrengthDescriptions="Very Poor;Weak;Average;Strong;Excellent" PreferredPasswordLength="10" PrefixText="Streng:">
 
-                        </asp:PasswordStrength>
+                        </asp:PasswordStrength>--%>
                                 <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                                 </asp:ToolkitScriptManager>
                         
