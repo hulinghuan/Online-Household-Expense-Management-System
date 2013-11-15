@@ -42,7 +42,7 @@
         </p>
 
                               
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server" backgroundColor ="blue">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
 
 <asp:Label ID="label" runat="server" Text="密码"></asp:Label>

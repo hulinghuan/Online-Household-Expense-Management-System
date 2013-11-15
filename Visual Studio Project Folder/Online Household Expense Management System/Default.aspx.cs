@@ -36,24 +36,30 @@ public partial class _Default : Page
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = conn;
-                cmd.CommandText = "select count(*) from UserLogin where EmailAddr=@EmailAddr"; 
-                cmd.Parameters.AddWithValue("@EmailAddr", tb_Username.Text);
+                cmd.CommandText = "select count(*) from UserLogin where EmailAddr=@UserName or UserName=@UserName "; 
+                cmd.Parameters.AddWithValue("@UserName", tb_Username.Text);
+                tb_Username.CssClass = "login_username";
+                tb_Password.CssClass = "login_password";
                 if (cmd.ExecuteScalar().ToString() == "0")
                 {
-                    // Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>"); 
-                    lb_reminder.Text = "username invaild!";
-                    lb_reminder.Visible = true;
-                    tb_Username.CssClass = "login_usernamewitherror";
+                    // Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>");
+                        lb_reminder.Text = "username invaild!";
+                        lb_reminder.Visible = true;
+                        tb_Username.CssClass = "login_usernamewitherror";
+                        tb_Username.Focus();
+                      
                 }
                 else
                 {
-                    tb_Username.CssClass = "login_username";
-                    cmd.CommandText = "select UserName from UserLogin where EmailAddr=@EmailAddr and UserPwd=@UserPwd";
+
+                    cmd.CommandText = "select count(*) from UserLogin where EmailAddr=@UserName and UserPwd=@UserPwd or UserName=@UserName and UserPwd=@UserPwd";
                     cmd.Parameters.AddWithValue("@UserPwd", tb_Password.Text);
-                    if (cmd.ExecuteScalar() == null)
+                    if (cmd.ExecuteScalar().ToString() == "0")
                     {//Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('password incorrect!')</script>");
                         lb_reminder.Text = "password incorrect!";
                         lb_reminder.Visible = true;
+                        tb_Password.CssClass = "login_usernamewitherror";
+                        tb_Password.Focus();
                     }
                     else
                     {
