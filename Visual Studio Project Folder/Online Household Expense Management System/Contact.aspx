@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
-
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit"%>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
         <hgroup class="title">
         <h1><%: Title %>.</h1>
         <h2>Your contact page.</h2>
@@ -23,7 +24,8 @@
 
     <section class="contact">
         <header>
-            <h3>Email:</h3>
+            <h3>Email:<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
+            </h3>
         </header>
         <p>
             <span class="label">Support:</span>
@@ -36,19 +38,51 @@
         <p>
             <span class="label">General:</span>
             <span><a href="mailto:General@example.com">General@example.com</a></span>
+
         </p>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+
+                              
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" backgroundColor ="blue">
             <ContentTemplate>
-                <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick">
-                </asp:Timer>
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                <asp:Label ID="Label2" runat="server" Text="这原本是不可见的" Visible="False"></asp:Label>
-                <asp:Label ID="Label3" runat="server" Text="这是可见的"></asp:Label>
+
+<asp:Label ID="label" runat="server" Text="密码"></asp:Label>
+<asp:TextBox ID="TextBox1" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:PasswordStrength ID="TextBox1_PasswordStrength" runat="server" TargetControlID="TextBox1">
+                </asp:PasswordStrength>
+
+                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click1" Text="Button" />
+
             </ContentTemplate>
-        </asp:UpdatePanel>
+         </asp:UpdatePanel>      
+        <asp:UpdatePanelAnimationExtender ID="UpdatePanelAnimationExtender1" runat="server" TargetControlID="UpdatePanel1">
+            <Animations>
+
+            <OnUpdated>
+
+                <Sequence>
+
+                    <Parallel duration="2" Fps="30">
+
+                          <Color  StartValue="#ff3f3f" EndValue="#ffffff" Property="style" PropertyKey="backgroundColor" />
+
+                    </Parallel>
+
+                </Sequence>
+
+            </OnUpdated>
+
+        </Animations>
+
+        </asp:UpdatePanelAnimationExtender>
+
+      
+
+    
+
+                
+
+
+
     </section>
 
     <section class="contact">

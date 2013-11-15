@@ -6,7 +6,7 @@
         <div class="login">
             <div class="reg-header">
                 <label>Sign in</label>
-                <a href="../Register.aspx"><span class="switch">Create an Account</span></a>
+                <a href="./Register.aspx"><span class="switch">Create an Account</span></a>
             </div>
             <div class="signin">
                 <form id="login_form" runat="server">
@@ -23,6 +23,8 @@
                             <asp:ScriptManager ID="ScriptManager1" runat="server">
                             </asp:ScriptManager>
                             <asp:Label ID="lb_reminder" runat="server" Text="Label" Visible="False"></asp:Label>
+                            <asp:Panel ID="Panel1" runat="server" ForeColor="Red">
+                            </asp:Panel>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                    

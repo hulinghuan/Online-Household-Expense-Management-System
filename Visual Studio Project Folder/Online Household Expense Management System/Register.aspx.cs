@@ -66,7 +66,7 @@ public partial class Default2 : System.Web.UI.Page
 
     protected bool IsEmailVaild(String emailAddr)
     {
-        String pattern = @"(([a-z0-9_])@([a-z0-9_]).([a-z0-9_]))";
+        String pattern = @"(([a-z0-9_])@([a-z0-9_]).([a-z0-9]))";
         Regex reg = new Regex(pattern, RegexOptions.IgnoreCase);
         if (reg.IsMatch(emailAddr)) { return true; }
         else {

@@ -2,7 +2,8 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <hgroup class="title">
+    <form id="form1" runat="server">
+        <hgroup class="title">
         <h1><%: Title %>.</h1>
     </hgroup>
     
@@ -22,6 +23,8 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />
                         </li>
                         <li>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
                             <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />
@@ -29,6 +32,17 @@
                         <li>
                             <asp:CheckBox runat="server" ID="RememberMe" />
                             <asp:Label runat="server" AssociatedControlID="RememberMe" CssClass="checkbox">Remember me?</asp:Label>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                    <ajaxToolkit:PasswordStrength ID="TextBox1_PasswordStrength" runat="server" TargetControlID="TextBox1">
+                                    </ajaxToolkit:PasswordStrength>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                         </li>
                     </ol>
                     <asp:Button runat="server" CommandName="Login" Text="Log in" />
@@ -45,4 +59,5 @@
         <h2>Use another service to log in.</h2>
         <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
     </section>
+    </form>
 </asp:Content>

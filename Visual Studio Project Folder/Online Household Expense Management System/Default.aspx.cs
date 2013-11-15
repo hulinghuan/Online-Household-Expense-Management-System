@@ -43,9 +43,11 @@ public partial class _Default : Page
                     // Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>"); 
                     lb_reminder.Text = "username invaild!";
                     lb_reminder.Visible = true;
+                    tb_Username.CssClass = "login_usernamewitherror";
                 }
                 else
                 {
+                    tb_Username.CssClass = "login_username";
                     cmd.CommandText = "select UserName from UserLogin where EmailAddr=@EmailAddr and UserPwd=@UserPwd";
                     cmd.Parameters.AddWithValue("@UserPwd", tb_Password.Text);
                     if (cmd.ExecuteScalar() == null)

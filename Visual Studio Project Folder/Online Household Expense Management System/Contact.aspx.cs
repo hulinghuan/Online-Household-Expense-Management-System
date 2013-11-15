@@ -11,13 +11,14 @@ public partial class Contact : Page
     {
 
     }
-    protected void Timer1_Tick(object sender, EventArgs e)
-    {
-        Label1.Text = DateTime.Now.ToString();
-    }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Button3_Click1(object sender, EventArgs e)
     {
-        Label2.Visible = true;
+        System.Threading.Thread.Sleep(3000);
+        Button3.Text = "ok";
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+
     }
 }
