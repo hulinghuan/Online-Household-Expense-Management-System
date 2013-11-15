@@ -20,13 +20,12 @@ public partial class _Default : Page
     {
         //if (!IsPostBack)
         //{
-
         //}
         
     }
 
 
-    //用户名是名字和密码混合输入
+    #region input usename and password
     protected void btn_Login_Click(object sender, EventArgs e)
     {
         string sConnectionString = ConfigurationManager.ConnectionStrings["HAConnString"].ToString();
@@ -69,4 +68,5 @@ public partial class _Default : Page
             }
         }
     }
+    #endregion
 }

@@ -16,6 +16,7 @@ public partial class Default2 : System.Web.UI.Page
 
     }
 
+    #region register
     protected void btn_Reg_Click(object sender, EventArgs e)
     {
         bool isCreatSucceed = false;
@@ -37,7 +38,6 @@ public partial class Default2 : System.Web.UI.Page
                 {
                     // Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('username invaild!')</script>"); 
                     lb_reminder.Text = "username used!";
-                    lb_reminder.Visible = true;
                 } else{
                      using (SqlCommand cmd = new SqlCommand("insert into UserLogin (EmailAddr,UserName,UserPwd) values (@EmailAddr,@UserName,@UserPwd)", conn))
                     {
@@ -52,26 +52,30 @@ public partial class Default2 : System.Web.UI.Page
                 }
                
             }
-            //Session["UserID"] = sUserID; // 写入Session
-            //Session["UserName"] = sUserName;
+            //Session["UserID"] = UserID; // 写入Session
+            //Session["UserName"] = Username;
             if (isCreatSucceed)
             ClientScript.RegisterStartupScript(this.GetType(), "", "<script>location.href='Default.aspx'</script>");
-         //   lb_reminder.Visible = false;
+            lb_reminder.Visible = false;
                     
                 }
             }
          }
         //缺少提示
     }
+    #endregion
 
+    #region validate the information
     protected bool IsEmailVaild(String emailAddr)
     {
         String pattern = @"(([a-z0-9_])@([a-z0-9_]).([a-z0-9]))";
         Regex reg = new Regex(pattern, RegexOptions.IgnoreCase);
         if (reg.IsMatch(emailAddr)) { return true; }
         else {
-            lb_reminder.Text = "please enter normal email, thank you.";
+            lb_reminder.Text = "email is incorrect.";
             lb_reminder.Visible = true;
+
+            tb_UserEmail.Focus();
             return false; 
         }
     }
@@ -82,9 +86,12 @@ public partial class Default2 : System.Web.UI.Page
         String pattern1 = @"([^a-z])";
         Regex reg1 = new Regex(pattern1, RegexOptions.IgnoreCase);
         if (reg.IsMatch(username) || username.Length<6 || reg1.IsMatch(username.Substring(0,1))) {
-            lb_reminder.Text = "normal UserName is started with letter, formed by number and letters and at least 6 characters long";
+            lb_reminder.Text = "UserName is incorrect";
             lb_reminder.Visible = true;
-            return false; }
+
+            tb_UserName.Focus();
+            return false; 
+        }
         else {
             return true; 
         }
@@ -94,13 +101,15 @@ public partial class Default2 : System.Web.UI.Page
         String pattern = @"([^a-z0-9])";
         Regex reg = new Regex(pattern, RegexOptions.IgnoreCase);
         if (reg.IsMatch(password) || password.Length<6) { 
-            lb_reminder.Text = "normal Password formed by number and letters and at least 6 characters long";
+            lb_reminder.Text = "Password is incorrect";
             lb_reminder.Visible = true;
+
+            tb_Password.Focus();
             return false;
         }
         else {
             return true; 
         }
     }
-    
+    #endregion
 }

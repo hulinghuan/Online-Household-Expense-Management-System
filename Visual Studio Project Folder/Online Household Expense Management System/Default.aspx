@@ -16,8 +16,10 @@
                 <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="login_password" TextMode="Password" ></asp:TextBox>
                 <input id="rememberMe" class="checkbox" type="checkbox" value="true" name="rememberMe"/>
                 <label class="checkbox-text">Remember me for a week</label>
+
                 <asp:Button ID="btn_Login" runat="server" OnClick="btn_Login_Click" Text="Sign in" CssClass="login_btn_Login" style="CURSOR:pointer"/>
-                <a href="/" class="resetpassword">Reset your password? </a>
+                
+                    <a href="/" class="resetpassword">Reset your password? </a>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <asp:ScriptManager ID="ScriptManager1" runat="server">

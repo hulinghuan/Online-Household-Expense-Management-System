@@ -140,6 +140,23 @@
 	float: left;
 }
 
+.Register-button:hover {
+	display: block;
+	width: 110px;
+	height: 45px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 3px;
+	border-radius: 1px;
+	background-color: #73D825;
+	border: thin solid #4A811C;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bolder;
+	float: left;
+}
 
 .Register-container .register .register-controls .reg-header .switch a {
 	text-decoration: none;
@@ -160,7 +177,8 @@
 	float: left;
 }
 .TextIndicator_tb_Password{
-     background-color:white;
-            color:#FFFFFF;
-            padding: 2px 3px 2px 3px;   
+     background-color:whitesmoke;
+     border-color:purple;
+     color:red;
+     padding: 2px 3px 2px 3px;   
 }

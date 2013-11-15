@@ -29,21 +29,35 @@
                         
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                        
-                        <label>Email address</label>
+                        <label>Email address
+                                </label>
                         <asp:TextBox ID="tb_UserEmail" runat="server" MaxLength="50" CssClass="Register-useremail"></asp:TextBox>
-                        <label>User name</label>
-                        <asp:TextBox ID="tb_UserName" runat="server" MaxLength="25" CssClass="Register-username"></asp:TextBox>
-                        <label>Password</label>
+                                <asp:BalloonPopupExtender ID="tb_UserEmail_BalloonPopupExtender" runat="server" TargetControlID="tb_UserEmail" 
+                                    BalloonSize="Small" BalloonPopupControlID="pl_Email" BalloonStyle="Cloud" UseShadow="true" DisplayOnMouseOver="false" DisplayOnFocus="True">
+                                </asp:BalloonPopupExtender>
+
+                        <label>User name
+                                </label>
+                       <asp:TextBox ID="tb_UserName" runat="server" MaxLength="25" CssClass="Register-username"></asp:TextBox>
+                                <asp:BalloonPopupExtender ID="tb_UserName_BalloonPopupExtender" runat="server" TargetControlID="tb_UserName"
+                                     BalloonSize="Medium" BalloonPopupControlID="pl_Username" BalloonStyle="Cloud" UseShadow="true" DisplayOnMouseOver="False" DisplayOnFocus="True">
+                                </asp:BalloonPopupExtender>
+
+
+                                <label>Password
+                                </label>
                         <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="Register-password" TextMode="Password"></asp:TextBox>
+                                <asp:BalloonPopupExtender ID="tb_Password_BalloonPopupExtender" runat="server" TargetControlID="tb_Password"
+                                     BalloonSize="Medium" BalloonPopupControlID="pl_Password" BalloonStyle="Cloud" UseShadow="true" DisplayOnMouseOver="False" DisplayOnFocus="True">
+                                </asp:BalloonPopupExtender>
 
 
                         
                         <asp:PasswordStrength ID="tb_Password_PasswordStrength" runat="server" Enabled="True" TargetControlID="tb_Password"
-                        DisplayPosition ="Leftside" StrengthIndicatorType="Text" TextCssClass="TextIndicator_tb_Password"
+                        DisplayPosition ="Rightside" StrengthIndicatorType="Text" TextCssClass="TextIndicator_tb_Password"
                         MinimumLowerCaseCharacters="1" MinimumNumericCharacters="1" MinimumSymbolCharacters ="1" MinimumUpperCaseCharacters="1"    
-                        TextStrengthDescriptions="Very Poor;Weak;Average;Strong;Excellent" PreferredPasswordLength="10" PrefixText="Streng:"   
-                         >
+                        TextStrengthDescriptions="Very Poor;Weak;Average;Strong;Excellent" PreferredPasswordLength="10" PrefixText="Streng:">
+
                         </asp:PasswordStrength>
                                 <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                                 </asp:ToolkitScriptManager>
@@ -58,8 +72,15 @@
                             </ContentTemplate>
                             </asp:UpdatePanel>
                             <asp:Button ID="btn_Reg" runat="server" OnClick="btn_Reg_Click" Text="Register" CssClass="Register-button" style="CURSOR:pointer"/> 
-
-                              
+                        <asp:Panel ID="pl_Username" runat="server">
+                            Normal Username should start with character and you can use numbers or characters then.
+                                </asp:Panel>
+                        <asp:Panel ID="pl_Email" runat="server">
+                                   Use your normal Email account.Example: Example@gmail.com
+                                            </asp:Panel>
+                        <asp:Panel ID="pl_Password" runat="server">
+                            normal Password formed by number and letters and at least 6 characters long.
+                                </asp:Panel>
                     </form>
                 </div>
             </div>
