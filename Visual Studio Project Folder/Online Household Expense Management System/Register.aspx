@@ -3,7 +3,7 @@
 <%@ Register src="controls/WebLogoControl.ascx" tagname="WebLogoControl" tagprefix="uc1" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <link id="Link1" rel="stylesheet" runat="server" media="screen" href="./Content/Register.css" />
+    <link id="Link1" rel="stylesheet" runat="server" media="screen" href="./Content/Register.min.css" />
     
 
         <div class="Register-container">
