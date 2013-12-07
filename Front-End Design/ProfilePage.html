@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="ProfilePage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header class="header">
+    	<label class="Page-Indicator">
+        	<span>Personal Page</span>
+        </label>
+        <label class="logout">
+        	<span>Logout</span>
+        </label>
+	</header>
+    <div class="container">
+    	<h1>Personal Settings</h1>
+        <div class="contact">
+        	<label class="section-name">Contact</label>
+            <label class="textTitle">First Name</label>
+            <input type="text" id="userName" class="textinput"/>
+            <label class="textTitle">Last Name</label>
+            <input type="text" id="userName" class="textinput"/>
+        </div>
+        <div class="account">
+        	<label class="section-name">Password</label>
+            <label class="textTitle">Current Password</label>
+            <input type="password" id="oldPassword" class="textinput"/>
+            <label class="textTitle">New Password</label>
+            <input type="password" id="newPassword" class="textinput"/>
+            <label class="textTitle">Confirm Password</label>
+            <input type="password" id="comfirmPassword" class="textinput"/>
+        </div>
+		<input type="button" class="button" id="Save" value="Save Profile"/>
+        <input type="button" class="button" id="Cancel" value="Cancel Changes"/>
+    </div>
+</body>
+</html>

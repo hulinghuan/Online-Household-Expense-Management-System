@@ -1,0 +1,108 @@
+@charset "utf-8";
+.header {
+	width: 985px;
+	height: 45px;
+	display: block;
+	background-color: #0769CC;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+.left-section {
+	width: 250px;
+	height: 600px;
+	display: block;
+	float: left;
+	margin-top: 10px;
+}
+.right-section {
+	width: 710px;
+	height: 600px;
+	display: block;
+	float: left;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.left-section .PersonalInfo {
+	display: block;
+	width: 250px;
+	height: 160px;
+}
+.left-section .PersonalInfo .profile-image {
+	width: 120px;
+	height: 120px;
+	display: block;
+	float: left;
+}
+.left-section .PersonalInfo .username {
+	height: 20px;
+	width: 120px;
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.left-section .PersonalInfo .user-role {
+	width: 120px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 30px;
+}
+.left-section .functionalSection {
+	width: 250px;
+	height: 410px;
+	margin-top: 10px;
+	display: block;
+}
+.left-section .functionalSection .change-my-profile {
+	display: block;
+}
+.left-section .functionalSection .add-new-plan {
+	display: block;
+}
+.left-section .functionalSection .delete-plan {
+	display: block;
+}
+.left-section .functionalSection .get-report {
+	display: block;
+}
+.left-section .functionalSection input {
+	display: block;
+	width: 200px;
+	margin-top: 30px;
+	margin-left: 24px;
+	height: 30px;
+}
+.right-section .planSection {
+	width: 710px;
+	height: 500px;
+}
+.right-section .planFunction {
+	width: 710px;
+	height: 100px;
+	display: block;
+}
+.right-section .planFunction input {
+	width: 120px;
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 30px;
+	display: block;
+	float: left;
+}
+.header .Page-Indicator {
+	width: 200px;
+	height: 32px;
+	display: block;
+	float: left;
+	padding-top: 13px;
+	padding-left: 10px;
+}
+.header .logout {
+	float: right;
+	display: block;
+	height: 32px;
+	width: 70px;
+	padding-top: 13px;
+}
