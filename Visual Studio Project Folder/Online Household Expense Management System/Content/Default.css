@@ -1,0 +1,243 @@
+﻿body {
+	display: inline;
+	/*height: 45px;*/
+}
+
+.container {
+	height: 570px;
+	display: block;
+	width: 985px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	float: left;
+}
+.container .login {
+	width: 260px;
+	height: 341px;
+	padding-top: 19px;
+	padding-right: 19px;
+	padding-bottom: 19px;
+	padding-left: 19px;
+	display: inline-block;
+	background-color: #F5F5F5;
+	border: thin solid #E4E4E4;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+}
+.container .login .reg-header {
+	display: block;
+	width: 259px;
+	height: 25px;
+	padding-top: 5px;
+
+}
+.container .login .reg-header h3 {
+	display: inline;
+	float: left;
+	width: 75px;
+	height: 23px;
+}
+.container .login .reg-header .switch {
+	display: inline;
+	width: 159px;
+	height: 62px;
+	margin-left: 98px;
+	color: #1176FF;
+	text-decoration: none;
+}
+.container .login .reg-header label {
+	display: inline;
+}
+.container .login .signin {
+	display: inline-block;
+	margin-top: 16px;
+}
+.container .login .signin #login_form label {
+	display: block;
+	margin-bottom: 2px;
+}
+.login_username {
+	width: 250px;
+	height: 25px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+	display: block;
+}
+.login_usernamewitherror {
+	width: 250px;
+	height: 25px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+	display: block;
+    border-color:red;
+}
+.login_password {
+	display: block;
+	width: 250px;
+	height: 25px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+.container .login .signin #login_form #rememberMe {
+	display: inline;
+}
+.container .login .signin #login_form .checkbox-text {
+	display: inline-block;
+}
+.container .login .signin #login_form #login {
+	display: block;
+}
+.container .login .signin .resetpassword {
+	display: block;
+	margin-top: 10px;
+}
+.login_btn_Login:hover {
+	display: block;
+	width: 110px;
+	height: 45px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 32px;
+	padding-right: 32px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 1px;
+	background-color: #73D825;
+	border: thin solid #4A811C;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.login_btn_Login {
+	display: block;
+	width: 110px;
+	height: 45px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 32px;
+	padding-right: 32px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 1px;
+	background-color: #5B9E23;
+	border: thin solid #4A811C;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+.container .feature-section {
+	display: block;
+	width: 625px;
+	height: 383px;
+	float: left;
+	margin-top: 20px;
+	/* [disabled]margin-right: 20px; */
+	margin-left: 25px;
+}
+.container .find-us {
+	display: block;
+	float: left;
+	height: 125px;
+	width: 298px;
+	margin-left: 20px;
+	margin-top: 20px;
+	background-color: #F5F5F5;
+	border: thin solid #E4E4E4;
+}
+.container .whats-news {
+	display: block;
+	float: left;
+	margin-top: 20px;
+	width: 622px;
+	height: 126px;
+	margin-left: 25px;
+	background-color: #F5F5F5;
+	border: thin solid #E4E4E4;
+}
+.container .feature-section .feature-image {
+	display: block;
+	float: left;
+	width: 302px;
+	height: 382px;
+}
+.container .feature-section .feature-video {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	width: 302px;
+	height: 382px;
+}
+.container .whats-news .news-slogan {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-left: 28px;
+}
+.container .whats-news .news-1 {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	list-style-type: square;
+}
+.container .whats-news .news-1 li {
+}
+.container .find-us h3 {
+	display: block;
+	margin-top: 9px;
+	margin-bottom: 6px;
+}
+.container .find-us .follow {
+	float: left;
+	display: block;
+	padding-left: 20px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+.container .find-us .follow li {
+
+}
+.container .find-us .follow li a {
+	text-decoration: none;
+}
+.container .feature-section .feature-video .feature-image-right {
+	background-image: url(../images/accounting-ledger.jpg);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-clip: border-box;
+	background-origin: padding-box;
+	background-size: auto auto;
+	display: block;
+	width: 302px;
+	height: 382px;
+}
+
+.container .feature-section .feature-image .feature-image-left {
+	background-image: url(../images/CPECalculatorandPen-after-modify.jpg);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-clip: border-box;
+	background-origin: padding-box;
+	background-size: auto auto;
+	display: block;
+	width: 302px;
+	height: 382px;
+}
+.container .login .reg-header a {
+	text-decoration: none;
+}
+

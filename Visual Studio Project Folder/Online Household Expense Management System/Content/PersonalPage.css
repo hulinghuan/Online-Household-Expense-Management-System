@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.left-section {
+	width: 250px;
+	height: 600px;
+	display: block;
+	float: left;
+	margin-top: 10px;
+}
+.right-section {
+	width: 710px;
+	height: 600px;
+	display: block;
+	float: left;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.left-section .PersonalInfo {
+	display: block;
+	width: 250px;
+	height: 160px;
+}
+.left-section .PersonalInfo .profile-image {
+	width: 120px;
+	height: 120px;
+	display: block;
+	float: left;
+}
+.ProfileImage{
+    width: 120px;
+	height: 120px;
+}
+.left-section .PersonalInfo .username {
+	height: 20px;
+	width: 120px;
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.left-section .PersonalInfo .user-role {
+	width: 120px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 30px;
+}
+.left-section .functionalSection {
+	width: 250px;
+	height: 410px;
+	margin-top: 10px;
+	display: block;
+}
+.left-section .functionalSection .changemyprofile {
+	display: block;
+}
+.left-section .functionalSection .addnewplan {
+	display: block;
+}
+.left-section .functionalSection .deleteplan {
+	display: block;
+}
+.left-section .functionalSection .get-report {
+	display: block;
+}
+.left-section .functionalSection input {
+	display: block;
+	width: 200px;
+	margin-top: 30px;
+	margin-left: 24px;
+	height: 30px;
+}
+.right-section .planSection {
+	width: 710px;
+	height: 500px;
+}
+.right-section .planFunction {
+	width: 710px;
+	height: 100px;
+	display: block;
+}
+.right-section .planFunction input {
+	width: 120px;
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 30px;
+	display: block;
+	float: left;
+}

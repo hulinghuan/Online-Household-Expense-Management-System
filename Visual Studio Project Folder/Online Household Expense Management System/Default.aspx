@@ -2,15 +2,18 @@
     AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <link id="Link1" rel="stylesheet" runat="server" media="screen" href="./Content/Default.css" />
     <div class="container">
         <div class="login">
             <div class="reg-header">
                 <label>Sign in</label>
-                <a href="./Register.aspx"><span class="switch">Create an Account</span></a>
+                <a href="./Register.aspx">
+                <span class="switch">Create an Account</span></a>
             </div>
             <div class="signin">
                 <form id="login_form" runat="server">
                 <label>Email address or username</label>
+                    <%--验证合法性<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>--%>
                 <asp:TextBox ID="tb_Username" runat="server" Maxlength="50" CssClass="login_username" ></asp:TextBox>
                 <label> Password</label>
                 <asp:TextBox ID="tb_Password" runat="server" MaxLength="25" CssClass="login_password" TextMode="Password" ></asp:TextBox>
@@ -30,7 +33,7 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                    
-                &nbsp;</form>
+                </form>
             </div>
         </div>
     	<div class="feature-section">	

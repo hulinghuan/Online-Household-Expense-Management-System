@@ -8,13 +8,14 @@
     <asp:PlaceHolder runat="server">      
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <webopt:BundleReference runat="server" Path="./Content/masterPage.css" /> 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link id="Link1" rel="stylesheet" runat="server" media="screen" href="./Content/masterPage.css" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
-<body>
-    <header class="header">
+<body>  <div class="wall">
+    <header class="header" >
             <label class="logo">
                 <a href="/">
                     <span>LOGO</span>
@@ -29,15 +30,17 @@
                 </li>
             </ul>
     </header>
+
     <div id="body">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
     </div>
+
     <footer class="footer">
             <ul id="second-links" class="second-nav">
                 <li>Contact Us</li>
                 <li>Company Information</li>
             </ul>
     </footer>
-    
-</body>
+
+</div>   </body>
 </html>

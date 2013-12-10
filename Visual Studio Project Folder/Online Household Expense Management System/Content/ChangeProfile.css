@@ -1,0 +1,86 @@
+﻿@charset "utf-8";
+
+.container {
+	width: 985px;
+	height: 550px;
+	display: block;
+	margin-top: 15px;
+}
+.container .contact {
+	width: 400px;
+	height: 230px;
+	display: block;
+	float: left;
+	margin-left: 60px;
+	border: 2px solid #B6B6B6;
+}
+.container .contact .section-name {
+	width: 55px;
+	height: 140px;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+.container .contact .textTitle {
+	display: block;
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.container .contact .textinput {
+	display: block;
+	height: 25px;
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.container .account {
+	display: block;
+	float: left;
+	width: 400px;
+	margin-left: 50px;
+	height: 230px;
+	border: 2px solid #B6B6B6;
+}
+.container .account .section-name {
+	width: 66px;
+	height: 190px;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+.container .account .textinput {
+	display: block;
+	height: 25px;
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.container .account .textTitle {
+	display: block;
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.container input.button {
+	width: 120px;
+	margin-top: 0px;
+	height: 30px;
+	display: block;
+	float: left;
+	margin-top: 40px;
+}
+.container .buttonSave {
+	margin-left: 515px;
+
+}
+.container .buttonCancel {
+	margin-left: 60px;
+}

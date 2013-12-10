@@ -51,9 +51,9 @@ public partial class _Default : Page
                 else
                 {
 
-                    cmd.CommandText = "select count(*) from UserLogin where EmailAddr=@UserName and UserPwd=@UserPwd or UserName=@UserName and UserPwd=@UserPwd";
+                    cmd.CommandText = "select UserID from UserLogin where EmailAddr=@UserName and UserPwd=@UserPwd or UserName=@UserName and UserPwd=@UserPwd";
                     cmd.Parameters.AddWithValue("@UserPwd", tb_Password.Text);
-                    if (cmd.ExecuteScalar().ToString() == "0")
+                    if (cmd.ExecuteScalar() == null)
                     {//Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('password incorrect!')</script>");
                         lb_reminder.Text = "password incorrect!";
                         lb_reminder.Visible = true;
@@ -62,7 +62,14 @@ public partial class _Default : Page
                     }
                     else
                     {
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>location.href='PersonalHome.aspx'</script>");//alert('succeed!');
+                        Session["UserID"] = cmd.ExecuteScalar().ToString();
+                        String tempStr = Session["UserID"].ToString();
+                        cmd.CommandText = "select imageID from UserProfile where UserID = @UserID";
+                        cmd.Parameters.AddWithValue("@UserID", tempStr);
+                        Session["imageID"] = cmd.ExecuteScalar().ToString();
+                        cmd.CommandText = "select UserName from UserProfile where UserID = @UserID";
+                        Session["UserName"] = cmd.ExecuteScalar().ToString();
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>location.href='PersonalPage.aspx'</script>");//alert('succeed!');
                     }
                 }
             }
