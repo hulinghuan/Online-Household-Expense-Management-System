@@ -9,8 +9,8 @@ public partial class PersonalPage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.ProfileImage.ImageUrl = "functionTest.aspx";
-        lb_name.Text = Session["UserName"].ToString();
+        //this.ProfileImage.ImageUrl = "functionTest.aspx";
+        //lb_name.Text = Session["UserName"].ToString();
     }
     protected void btn_ChangeProfile_Click(object sender, EventArgs e)
     {
